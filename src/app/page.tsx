@@ -26,12 +26,14 @@ import {
 function Navigation() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-[#0a0a0f]/80 backdrop-blur-xl">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6">
         <a href="#" className="flex items-center gap-2">
           <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-indigo-500 to-violet-500">
             <Zap className="h-4 w-4 text-white" />
           </div>
-          <span className="text-xl font-bold text-white">NovaPay</span>
+          <span className="text-lg font-bold text-white sm:text-xl">
+            NovaPay
+          </span>
         </a>
 
         <div className="hidden items-center gap-8 md:flex">
@@ -94,42 +96,42 @@ function Navigation() {
 
 function HeroSection() {
   return (
-    <section className="dot-pattern relative overflow-hidden pt-32 pb-20 md:pt-44 md:pb-32">
+    <section className="dot-pattern relative overflow-hidden pt-28 pb-16 sm:pt-32 sm:pb-20 md:pt-44 md:pb-32">
       {/* Gradient orbs */}
-      <div className="pointer-events-none absolute top-0 left-1/4 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-indigo-500/10 blur-[120px]" />
-      <div className="pointer-events-none absolute top-20 right-1/4 h-[400px] w-[400px] translate-x-1/2 rounded-full bg-violet-500/10 blur-[120px]" />
+      <div className="pointer-events-none absolute top-0 left-1/4 h-[300px] w-[300px] -translate-x-1/2 rounded-full bg-indigo-500/10 blur-[100px] sm:h-[500px] sm:w-[500px] sm:blur-[120px]" />
+      <div className="pointer-events-none absolute top-20 right-1/4 h-[250px] w-[250px] translate-x-1/2 rounded-full bg-violet-500/10 blur-[100px] sm:h-[400px] sm:w-[400px] sm:blur-[120px]" />
 
-      <div className="relative mx-auto max-w-7xl px-6">
-        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
+        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-20">
           {/* Left column */}
           <div className="animate-fade-in-up">
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-indigo-500/20 bg-indigo-500/10 px-4 py-1.5 text-sm text-indigo-300">
-              <Zap className="h-3.5 w-3.5" />
+            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-indigo-500/20 bg-indigo-500/10 px-3 py-1.5 text-xs text-indigo-300 sm:mb-6 sm:px-4 sm:text-sm">
+              <Zap className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
               Now processing $12B+ annually
             </div>
 
-            <h1 className="mb-6 text-4xl font-bold leading-tight tracking-tight text-white md:text-6xl md:leading-[1.1]">
+            <h1 className="mb-5 text-3xl font-bold leading-tight tracking-tight text-white sm:mb-6 sm:text-4xl md:text-6xl md:leading-[1.1]">
               Payment Infrastructure{" "}
               <span className="gradient-text">for the Internet</span>
             </h1>
 
-            <p className="mb-8 max-w-lg text-lg leading-relaxed text-zinc-400">
+            <p className="mb-6 max-w-lg text-base leading-relaxed text-zinc-400 sm:mb-8 sm:text-lg">
               A unified API to accept payments, manage subscriptions, and
               prevent fraud. Built for developers who demand reliability at
               scale.
             </p>
 
-            <div className="flex flex-col gap-4 sm:flex-row">
+            <div className="flex flex-col gap-3 sm:flex-row sm:gap-4">
               <a
                 href="#cta"
-                className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-indigo-500 to-violet-500 px-6 py-3 font-medium text-white transition-opacity hover:opacity-90"
+                className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-indigo-500 to-violet-500 px-6 py-3 text-sm font-medium text-white transition-opacity hover:opacity-90 sm:text-base"
               >
                 Start Building
                 <ArrowRight className="h-4 w-4" />
               </a>
               <a
                 href="#"
-                className="inline-flex items-center justify-center gap-2 rounded-lg border border-white/10 px-6 py-3 font-medium text-zinc-300 transition-colors hover:border-white/20 hover:text-white"
+                className="inline-flex items-center justify-center gap-2 rounded-lg border border-white/10 px-6 py-3 text-sm font-medium text-zinc-300 transition-colors hover:border-white/20 hover:text-white sm:text-base"
               >
                 View Documentation
                 <ChevronRight className="h-4 w-4" />
@@ -140,19 +142,19 @@ function HeroSection() {
           {/* Right column — Code preview */}
           <div className="animate-fade-in-up delay-200 opacity-0">
             <div className="code-block animate-pulse-glow overflow-hidden p-1">
-              <div className="flex items-center gap-2 px-4 py-3">
-                <div className="h-3 w-3 rounded-full bg-red-500/60" />
-                <div className="h-3 w-3 rounded-full bg-yellow-500/60" />
-                <div className="h-3 w-3 rounded-full bg-green-500/60" />
+              <div className="flex items-center gap-2 px-3 py-2.5 sm:px-4 sm:py-3">
+                <div className="h-2.5 w-2.5 rounded-full bg-red-500/60 sm:h-3 sm:w-3" />
+                <div className="h-2.5 w-2.5 rounded-full bg-yellow-500/60 sm:h-3 sm:w-3" />
+                <div className="h-2.5 w-2.5 rounded-full bg-green-500/60 sm:h-3 sm:w-3" />
                 <span className="ml-2 text-xs text-zinc-500">
                   payment.ts
                 </span>
               </div>
-              <div className="px-4 pb-4 font-mono text-sm leading-relaxed">
+              <div className="overflow-x-auto px-3 pb-3 font-mono text-xs leading-relaxed sm:px-4 sm:pb-4 sm:text-sm">
                 <p className="text-zinc-500">
                   {"// Create a payment intent"}
                 </p>
-                <p>
+                <p className="whitespace-nowrap">
                   <span className="text-violet-400">const</span>{" "}
                   <span className="text-blue-300">payment</span>{" "}
                   <span className="text-zinc-500">=</span>{" "}
@@ -182,7 +184,7 @@ function HeroSection() {
                   <span className="text-green-300">{'"card"'}</span>
                   <span className="text-zinc-400">,</span>
                 </p>
-                <p className="pl-4">
+                <p className="pl-4 whitespace-nowrap">
                   <span className="text-blue-300">description</span>
                   <span className="text-zinc-400">:</span>{" "}
                   <span className="text-green-300">
@@ -199,7 +201,7 @@ function HeroSection() {
                     Payment created successfully
                   </span>
                 </p>
-                <p>
+                <p className="whitespace-nowrap">
                   <span className="text-violet-400">console</span>
                   <span className="text-zinc-400">.</span>
                   <span className="text-blue-300">log</span>
@@ -235,16 +237,16 @@ const trustedCompanies = [
 
 function TrustedBySection() {
   return (
-    <section className="border-y border-white/5 py-12">
-      <div className="mx-auto max-w-7xl px-6">
-        <p className="mb-8 text-center text-sm text-zinc-500">
+    <section className="border-y border-white/5 py-10 sm:py-12">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+        <p className="mb-6 text-center text-xs text-zinc-500 sm:mb-8 sm:text-sm">
           Trusted by 10,000+ businesses worldwide
         </p>
-        <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-6">
+        <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 sm:gap-x-12 sm:gap-y-6">
           {trustedCompanies.map((name) => (
             <span
               key={name}
-              className="text-lg font-semibold tracking-wide text-zinc-600 transition-colors hover:text-zinc-400"
+              className="text-sm font-semibold tracking-wide text-zinc-600 transition-colors hover:text-zinc-400 sm:text-lg"
             >
               {name}
             </span>
@@ -300,29 +302,29 @@ const features = [
 
 function FeaturesSection() {
   return (
-    <section id="features" className="py-24 md:py-32">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="mx-auto mb-16 max-w-2xl text-center">
-          <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">
+    <section id="features" className="py-16 sm:py-24 md:py-32">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+        <div className="mx-auto mb-10 max-w-2xl text-center sm:mb-16">
+          <h2 className="mb-3 text-2xl font-bold text-white sm:mb-4 sm:text-3xl md:text-4xl">
             Everything you need to{" "}
             <span className="gradient-text">accept payments</span>
           </h2>
-          <p className="text-lg text-zinc-400">
+          <p className="text-base text-zinc-400 sm:text-lg">
             A complete toolkit for internet commerce. Handle every payment
             scenario with a single integration.
           </p>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {features.map((feature, i) => (
+        <div className="grid gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
+          {features.map((feature) => (
             <div
               key={feature.title}
-              className="glass-card group rounded-xl p-6 transition-all duration-300"
+              className="glass-card group rounded-xl p-5 transition-all duration-300 sm:p-6"
             >
-              <div className="mb-4 inline-flex rounded-lg bg-gradient-to-br from-indigo-500/10 to-violet-500/10 p-3">
-                <feature.icon className="h-6 w-6 text-indigo-400" />
+              <div className="mb-3 inline-flex rounded-lg bg-gradient-to-br from-indigo-500/10 to-violet-500/10 p-2.5 sm:mb-4 sm:p-3">
+                <feature.icon className="h-5 w-5 text-indigo-400 sm:h-6 sm:w-6" />
               </div>
-              <h3 className="mb-2 text-lg font-semibold text-white">
+              <h3 className="mb-2 text-base font-semibold text-white sm:text-lg">
                 {feature.title}
               </h3>
               <p className="text-sm leading-relaxed text-zinc-400">
@@ -366,19 +368,19 @@ const steps = [
 
 function HowItWorksSection() {
   return (
-    <section className="border-y border-white/5 py-24 md:py-32">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="mx-auto mb-16 max-w-2xl text-center">
-          <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">
+    <section className="border-y border-white/5 py-16 sm:py-24 md:py-32">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+        <div className="mx-auto mb-10 max-w-2xl text-center sm:mb-16">
+          <h2 className="mb-3 text-2xl font-bold text-white sm:mb-4 sm:text-3xl md:text-4xl">
             Up and running in minutes
           </h2>
-          <p className="text-lg text-zinc-400">
+          <p className="text-base text-zinc-400 sm:text-lg">
             Three simple steps to start accepting payments from anywhere in the
             world.
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-10 sm:gap-8 md:grid-cols-3">
           {steps.map((step, i) => (
             <div key={step.title} className="relative text-center">
               {/* Connector line */}
@@ -386,13 +388,13 @@ function HowItWorksSection() {
                 <div className="absolute top-10 left-[calc(50%+40px)] hidden h-px w-[calc(100%-80px)] bg-gradient-to-r from-indigo-500/40 to-transparent md:block" />
               )}
 
-              <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-2xl border border-white/5 bg-gradient-to-br from-indigo-500/10 to-violet-500/10">
-                <step.icon className="h-8 w-8 text-indigo-400" />
+              <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl border border-white/5 bg-gradient-to-br from-indigo-500/10 to-violet-500/10 sm:mb-6 sm:h-20 sm:w-20">
+                <step.icon className="h-6 w-6 text-indigo-400 sm:h-8 sm:w-8" />
               </div>
               <span className="mb-2 block text-xs font-semibold uppercase tracking-widest text-indigo-400">
                 Step {step.step}
               </span>
-              <h3 className="mb-3 text-xl font-semibold text-white">
+              <h3 className="mb-2 text-lg font-semibold text-white sm:mb-3 sm:text-xl">
                 {step.title}
               </h3>
               <p className="mx-auto max-w-xs text-sm leading-relaxed text-zinc-400">
@@ -415,7 +417,8 @@ const pricingTiers = [
     name: "Starter",
     price: "$0",
     period: "/mo",
-    description: "Perfect for small businesses and side projects getting started.",
+    description:
+      "Perfect for small businesses and side projects getting started.",
     rate: "2.9% + 30c per transaction",
     features: [
       "Unlimited API calls",
@@ -431,7 +434,8 @@ const pricingTiers = [
     name: "Growth",
     price: "$79",
     period: "/mo",
-    description: "For growing businesses that need advanced features and priority support.",
+    description:
+      "For growing businesses that need advanced features and priority support.",
     rate: "2.5% + 25c per transaction",
     features: [
       "Everything in Starter",
@@ -449,7 +453,8 @@ const pricingTiers = [
     name: "Enterprise",
     price: "Custom",
     period: "",
-    description: "For large-scale operations with custom requirements and SLAs.",
+    description:
+      "For large-scale operations with custom requirements and SLAs.",
     rate: "Volume-based pricing",
     features: [
       "Everything in Growth",
@@ -467,28 +472,28 @@ const pricingTiers = [
 
 function PricingSection() {
   return (
-    <section id="pricing" className="py-24 md:py-32">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="mx-auto mb-16 max-w-2xl text-center">
-          <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">
+    <section id="pricing" className="py-16 sm:py-24 md:py-32">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+        <div className="mx-auto mb-10 max-w-2xl text-center sm:mb-16">
+          <h2 className="mb-3 text-2xl font-bold text-white sm:mb-4 sm:text-3xl md:text-4xl">
             Simple, transparent pricing
           </h2>
-          <p className="text-lg text-zinc-400">
+          <p className="text-base text-zinc-400 sm:text-lg">
             Start for free, then scale as you grow. No hidden fees, no
             surprises.
           </p>
         </div>
 
-        <div className="grid gap-8 lg:grid-cols-3">
+        <div className="grid gap-6 sm:gap-8 lg:grid-cols-3">
           {pricingTiers.map((tier) => (
             <div
               key={tier.name}
-              className={`glass-card relative rounded-2xl p-8 transition-all duration-300 ${
+              className={`glass-card relative rounded-2xl p-6 transition-all duration-300 sm:p-8 ${
                 tier.popular ? "pricing-popular" : ""
               }`}
             >
               {tier.popular && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-indigo-500 to-violet-500 px-4 py-1 text-xs font-semibold text-white">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-gradient-to-r from-indigo-500 to-violet-500 px-4 py-1 text-xs font-semibold text-white">
                   Most Popular
                 </div>
               )}
@@ -496,19 +501,23 @@ function PricingSection() {
               <h3 className="mb-1 text-lg font-semibold text-white">
                 {tier.name}
               </h3>
-              <p className="mb-6 text-sm text-zinc-500">{tier.description}</p>
+              <p className="mb-4 text-sm text-zinc-500 sm:mb-6">
+                {tier.description}
+              </p>
 
               <div className="mb-2 flex items-baseline gap-1">
-                <span className="text-4xl font-bold text-white">
+                <span className="text-3xl font-bold text-white sm:text-4xl">
                   {tier.price}
                 </span>
                 {tier.period && (
                   <span className="text-zinc-500">{tier.period}</span>
                 )}
               </div>
-              <p className="mb-8 text-sm text-indigo-400">{tier.rate}</p>
+              <p className="mb-6 text-sm text-indigo-400 sm:mb-8">
+                {tier.rate}
+              </p>
 
-              <ul className="mb-8 space-y-3">
+              <ul className="mb-6 space-y-3 sm:mb-8">
                 {tier.features.map((feature) => (
                   <li
                     key={feature}
@@ -559,23 +568,26 @@ const integrations = [
 
 function IntegrationsSection() {
   return (
-    <section id="integrations" className="border-y border-white/5 py-24 md:py-32">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="mx-auto mb-16 max-w-2xl text-center">
-          <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">
+    <section
+      id="integrations"
+      className="border-y border-white/5 py-16 sm:py-24 md:py-32"
+    >
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+        <div className="mx-auto mb-10 max-w-2xl text-center sm:mb-16">
+          <h2 className="mb-3 text-2xl font-bold text-white sm:mb-4 sm:text-3xl md:text-4xl">
             Integrates with your stack
           </h2>
-          <p className="text-lg text-zinc-400">
+          <p className="text-base text-zinc-400 sm:text-lg">
             Connect NovaPay with hundreds of tools and platforms you already
             use.
           </p>
         </div>
 
-        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 md:grid-cols-4 lg:grid-cols-6">
           {integrations.map((name) => (
             <div
               key={name}
-              className="glass-card flex items-center justify-center rounded-xl px-4 py-6 text-sm font-semibold text-zinc-300 transition-all duration-300 hover:text-white"
+              className="glass-card flex items-center justify-center rounded-xl px-3 py-4 text-sm font-semibold text-zinc-300 transition-all duration-300 hover:text-white sm:px-4 sm:py-6"
             >
               {name}
             </div>
@@ -616,25 +628,25 @@ const testimonials = [
 
 function TestimonialsSection() {
   return (
-    <section id="about" className="py-24 md:py-32">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="mx-auto mb-16 max-w-2xl text-center">
-          <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">
+    <section id="about" className="py-16 sm:py-24 md:py-32">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+        <div className="mx-auto mb-10 max-w-2xl text-center sm:mb-16">
+          <h2 className="mb-3 text-2xl font-bold text-white sm:mb-4 sm:text-3xl md:text-4xl">
             Loved by developers & teams
           </h2>
-          <p className="text-lg text-zinc-400">
+          <p className="text-base text-zinc-400 sm:text-lg">
             See why thousands of companies trust NovaPay to power their
             payments.
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-4 sm:gap-6 md:grid-cols-3 md:gap-8">
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.name}
-              className="glass-card rounded-xl p-6 transition-all duration-300"
+              className="glass-card rounded-xl p-5 transition-all duration-300 sm:p-6"
             >
-              <div className="mb-4 flex gap-1">
+              <div className="mb-3 flex gap-1 sm:mb-4">
                 {Array.from({ length: 5 }).map((_, i) => (
                   <Star
                     key={i}
@@ -642,7 +654,7 @@ function TestimonialsSection() {
                   />
                 ))}
               </div>
-              <blockquote className="mb-6 text-sm leading-relaxed text-zinc-300">
+              <blockquote className="mb-4 text-sm leading-relaxed text-zinc-300 sm:mb-6">
                 &ldquo;{testimonial.quote}&rdquo;
               </blockquote>
               <div>
@@ -665,17 +677,17 @@ function TestimonialsSection() {
 
 function CTASection() {
   return (
-    <section id="cta" className="py-24 md:py-32">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="glass-card relative overflow-hidden rounded-3xl px-6 py-16 text-center md:px-16 md:py-24">
+    <section id="cta" className="py-16 sm:py-24 md:py-32">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+        <div className="glass-card relative overflow-hidden rounded-2xl px-5 py-12 text-center sm:rounded-3xl sm:px-8 md:px-16 md:py-24">
           {/* Background gradient */}
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-indigo-500/10 via-transparent to-violet-500/10" />
 
           <div className="relative">
-            <h2 className="mb-4 text-3xl font-bold text-white md:text-5xl">
+            <h2 className="mb-3 text-2xl font-bold text-white sm:mb-4 sm:text-3xl md:text-5xl">
               Ready to transform your payments?
             </h2>
-            <p className="mx-auto mb-10 max-w-lg text-lg text-zinc-400">
+            <p className="mx-auto mb-8 max-w-lg text-base text-zinc-400 sm:mb-10 sm:text-lg">
               Join 10,000+ businesses already using NovaPay. Get started in
               minutes with our free tier.
             </p>
@@ -684,11 +696,11 @@ function CTASection() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder-zinc-500 outline-none transition-colors focus:border-indigo-500"
+                className="min-w-0 flex-1 rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder-zinc-500 outline-none transition-colors focus:border-indigo-500"
               />
               <button
                 type="button"
-                className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-indigo-500 to-violet-500 px-6 py-3 text-sm font-medium text-white transition-opacity hover:opacity-90"
+                className="inline-flex shrink-0 items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-indigo-500 to-violet-500 px-6 py-3 text-sm font-medium text-white transition-opacity hover:opacity-90"
               >
                 Get Started
                 <ArrowRight className="h-4 w-4" />
@@ -718,11 +730,11 @@ const footerLinks = {
 
 function Footer() {
   return (
-    <footer className="border-t border-white/5 py-16">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="grid gap-12 md:grid-cols-6">
+    <footer className="border-t border-white/5 py-12 sm:py-16">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+        <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-6 md:gap-12">
           {/* Brand */}
-          <div className="md:col-span-2">
+          <div className="sm:col-span-2">
             <a href="#" className="mb-4 flex items-center gap-2">
               <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-indigo-500 to-violet-500">
                 <Zap className="h-4 w-4 text-white" />
@@ -761,10 +773,10 @@ function Footer() {
           {/* Link columns */}
           {Object.entries(footerLinks).map(([heading, links]) => (
             <div key={heading}>
-              <h4 className="mb-4 text-sm font-semibold text-white">
+              <h4 className="mb-3 text-sm font-semibold text-white sm:mb-4">
                 {heading}
               </h4>
-              <ul className="space-y-2.5">
+              <ul className="space-y-2 sm:space-y-2.5">
                 {links.map((link) => (
                   <li key={link}>
                     <a
@@ -780,7 +792,7 @@ function Footer() {
           ))}
         </div>
 
-        <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-white/5 pt-8 md:flex-row">
+        <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-white/5 pt-8 sm:mt-16 md:flex-row">
           <p className="text-sm text-zinc-600">
             2025 NovaPay, Inc. All rights reserved.
           </p>
@@ -810,7 +822,7 @@ function Footer() {
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#0a0a0f] font-sans text-zinc-200">
+    <div className="min-h-screen overflow-x-hidden bg-[#0a0a0f] font-sans text-zinc-200">
       <Navigation />
       <HeroSection />
       <TrustedBySection />
